@@ -7,24 +7,24 @@ export const LogIn = () => {
     const { logIn } = React.useContext(AuthContext);
 
     return (
-      <KeyboardAvoidingView behaviour = "padding" style = { styles.container }>
+      <KeyboardAvoidingView behaviour = "padding" style = {styles.container}>
         <StatusBar backgroundColor = '#fa8231' />
-        <View style = { styles.formContainer }>
+        <View style = {styles.formContainer}>
           <TextInput
             placeholder = "Username or Email"
             returnKeyType = "next"
             keyboardType = "email-address"
             autoCapitalize = 'none'
-            style = { styles.input }
+            style = {styles.input}
             />
           <TextInput
             placeholder = "Password"
             returnKeyType = "go"
             secureTextEntry
-            style = { styles.input }
+            style = {styles.input}
             />
-          <TouchableOpacity style = { styles.buttonContainer } onPress={() => logIn()}>
-            <Text style =  { styles.buttonTextContainer }>LOGIN</Text>
+          <TouchableOpacity style = {styles.buttonContainer} onPress={() => logIn()}>
+            <Text style = {styles.buttonTextContainer}>LOGIN</Text>
           </TouchableOpacity>
         </View>
       </KeyboardAvoidingView>
@@ -43,12 +43,12 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 50,
-    backgroundColor: '#45aaf2',
+    backgroundColor: '#0984e3',
     marginBottom: 20,
     paddingHorizontal: 20
   },
   buttonContainer: {
-    backgroundColor: '#45aaf2',
+    backgroundColor: '#0984e3',
     alignItems: 'center',
     paddingVertical: 15
   },

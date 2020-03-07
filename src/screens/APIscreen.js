@@ -35,7 +35,7 @@ export default class Api extends Component {
   render() {
     return (
       <ScrollView style = {styles.container}>
-        <StatusBar backgroundColor = '#45aaf2' />
+        <StatusBar backgroundColor = '#0984e3' />
         {!this.state.loaded}
               <TouchableOpacity style = { styles.buttonContainer }  onPress = {this.getData}>
                 <Text style =  {styles.buttonTextContainer}>PRESS TO GET DATA</Text>
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   buttonContainer: {
-    backgroundColor: '#45aaf2',
+    backgroundColor: '#0984e3',
     alignItems: 'center',
     paddingVertical: 15
   },
