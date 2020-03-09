@@ -12,8 +12,9 @@ export default class Api extends Component {
       }
   }
 
+  //const that takes the url of the api and fetch the data
   getData = (gd) => {
-    this.setState({ loaded:false, error:null });
+    this.setState({ loaded: false, error: null });
     let url = 'https://api.randomuser.me/?results=60';
     let req = new Request(url, { method: 'GET' });
 
@@ -23,11 +24,13 @@ export default class Api extends Component {
     .catch(this.errors)
   }
 
+  //const that logs the data to the screen
   showData = (data) => {
-    this.setState({loaded:true, person: data.results});
+    this.setState({loaded: true, person: data.results});
     console.log(data);
   }
 
+  //const that catches and shows the proper error message
   errors = (err) => {
       this.setState({loaded: true, error: err.message});
   }
@@ -36,24 +39,24 @@ export default class Api extends Component {
     return (
       <ScrollView style = {styles.container}>
         <StatusBar backgroundColor = '#0984e3' />
-        {!this.state.loaded}
-              <TouchableOpacity style = { styles.buttonContainer }  onPress = {this.getData}>
-                <Text style =  {styles.buttonTextContainer}>PRESS TO GET DATA</Text>
-              </TouchableOpacity>
-                {this.state.error && ( <Text style = {styles.errorContainer}> {this.state.error} </Text>
-                )}
-                {this.state.person && (
-                  this.state.person.map( people => (
-                    <Text key = {people.dob.date} style = {styles.apitextContainer}>
-                    {people.name.title} {people.name.first} {people.name.last}
-                    </Text>
-                  ))
-                )}
-        </ScrollView>
+          {!this.state.loaded}
+            <TouchableOpacity style = { styles.buttonContainer }  onPress = {this.getData}>
+              <Text style =  {styles.buttonTextContainer}> PRESS TO GET DATA </Text>
+            </TouchableOpacity>
+            {this.state.error && ( <Text style = {styles.errorContainer}> {this.state.error} </Text>)}
+            {this.state.person && (this.state.person.map( people => (
+              <Text key = {people.dob.date} style = {styles.apitextContainer}>
+                {people.name.title} {people.name.first} {people.name.last}
+              </Text>
+              ))
+            )}
+      </ScrollView>
       );
   }
 }
 
+
+// screen styling
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#fa8231'
@@ -68,7 +71,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   apitextContainer: {
-    color: '#fff',
+    color: 'white',
     fontSize: 20,
   },
   buttonContainer: {

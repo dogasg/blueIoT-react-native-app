@@ -4,7 +4,7 @@ import { Text, View, StyleSheet, TextInput, TouchableOpacity, KeyboardAvoidingVi
 import { AuthContext } from '../Context';
 
 export const LogIn = () => {
-    const { logIn } = React.useContext(AuthContext);
+    const { logIn } = React.useContext(AuthContext); //we use the logIn function from authContext
 
     return (
       <KeyboardAvoidingView behaviour = "padding" style = {styles.container}>

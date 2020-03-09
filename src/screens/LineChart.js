@@ -18,7 +18,7 @@ export const LineKit = () => {
     ]
   };
 
-  //the configuration of line chart
+  //configuration of line chart
   const chartConfig = {
     backgroundGradientFrom: "#fa8231",
     backgroundGradientTo: "#fa8231",
@@ -34,7 +34,7 @@ export const LineKit = () => {
       <View>
         <Text style = {styles.textContainer}> Greece's GDP 2010 - 2019 (in Billions) </Text>
       </View>
-        <LineChart
+        <LineChart //Styling and configuration of LineChart
           data = { data }
           withShadow = { false }
           withInnerLines = { false }

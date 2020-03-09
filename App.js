@@ -10,7 +10,7 @@ import APIscreen from './src/screens/APIscreen';
 import { LogIn } from './src/screens/LogInScreen';
 import { LogOut } from './src/screens/LogOutScreen';
 import { Splash } from './src/screens/SplashScreen';
-import { LineKit } from './src/screens/BezierChart';
+import { LineKit } from './src/screens/LineChart';
 
 import { AuthContext } from './src/Context';
 
@@ -62,7 +62,7 @@ const RootStackScreen = ({ userToken }) => (
     screenOptions={{
       headerShown: false
   }}>
-    {userToken ? (   //if userToken -> go the app will load the bottom tab navigator screen
+    {userToken ? ( //if userToken -> go the app will load the bottom tab navigator screen
       <RootStack.Screen
         name="App"
         component={AppStack}

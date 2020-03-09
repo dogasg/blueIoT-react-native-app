@@ -4,7 +4,7 @@ import { Text, View, StyleSheet, TextInput, TouchableOpacity, KeyboardAvoidingVi
 import { AuthContext } from '../Context';
 
 export const LogOut = () => {
-  const { logOut } = React.useContext(AuthContext);
+  const { logOut } = React.useContext(AuthContext); //we use the logOut function from authContext
 
     return (
         <View style = {styles.singOutContainer}>
